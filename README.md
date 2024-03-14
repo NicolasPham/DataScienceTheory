@@ -110,10 +110,9 @@ LL_Null: Log Likelihood Null: the log_likelihood of the model has no independent
   - Compare Log_likelihood with LL_Null to see if the model has any explanatory power
 LLR: log_likelihood ratio: measure if the model is statiscally different from LL_NULL
 Pseudo-Rsquared: good is between 0.2 - 0.4
-
 ```
 
-Python:
+#### Python:
 
 ```python
 import statsmodels.api as sm
