@@ -2,7 +2,6 @@
 ### Decomposition of Variability
 <details>
 
-```
 - Sum of squares total (SST / TSS)
   - measures the total variability of the datasets
   - $SUM((yi - mean(y))^2)$
@@ -28,7 +27,7 @@
     3. Normality and homoscedasticity (normal distributed)
     4. No autocorrelation
     5. NO multicollinearity (2 or more variables have a highe observed correlation)
-```
+
 </details>
 
 ### 1. Linear Regression: $yhat = b0 + bi * xi + e$ (simple regression equation)
@@ -137,6 +136,11 @@ accuracy_train = (cm[0,0] + cm[1,1]) / cm.sum()
 ```
 </details>
 
+### 3. Cluster Analysis
+<details>
+
+
+</details>
 
 
 
