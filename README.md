@@ -138,6 +138,8 @@ accuracy_train = (cm[0,0] + cm[1,1]) / cm.sum()
 
 ### 3. Cluster Analysis
 <details>
+- Goal: maimize the similarity and dissimilarity between clusters
+- Centroid: mean position of a group of points (aka center of mass)
 
 
 </details>
