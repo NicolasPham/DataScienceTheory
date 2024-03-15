@@ -147,7 +147,14 @@ accuracy_train = (cm[0,0] + cm[1,1]) / cm.sum()
   - Specify cluster seeds  
   - Assign each point to a centroid  
   - Adjust centroids  
-
+- Choose number of cluster using **Elbow Method**:
+  - WCSS: within-cluster sum of squares need to be minimize while number of cluster is relatively small
+-  Cons of K-Means:
+  - We need to pick K (use elbow method)
+  - Sensitive to initialization (use k-means++)
+  - Sensitive to outliers
+  - Produce spherical solutions
+  - Standardization
 #### Python:
 ```python
 from sklearn.cluster import KMeans
@@ -155,8 +162,14 @@ kmeans = KMeans(2)
 kmeans.fit(x)
 
 # Clustering result:
-cluster = kmean.fit_predict(x) #return the cluster predictions in an array
+cluster = kmeans.fit_predict(x) #return the cluster predictions in an array
 
+# Calculate WCSS:
+wcss = []
+for i in range(1,7):
+  kmeans = KMeans(i)
+  kmeans.fit(x)
+  wcss.append(kmeans.inertia_)
 ```
 </details>
 
