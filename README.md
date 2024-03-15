@@ -97,6 +97,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, shuff
 </details>
 
 ### 2. Logistic Regression
+
 <details>
 $delta(odds) = e^(b_k)$
   
@@ -138,10 +139,25 @@ accuracy_train = (cm[0,0] + cm[1,1]) / cm.sum()
 
 ### 3. Cluster Analysis
 <details>
-- Goal: maimize the similarity and dissimilarity between clusters
-- Centroid: mean position of a group of points (aka center of mass)
+  
+- Goal: maimize the similarity and dissimilarity between clusters  
+- Centroid: mean position of a group of points (aka center of mass)  
+- K-means Clustering:  
+  - Define number of clusters  
+  - Specify cluster seeds  
+  - Assign each point to a centroid  
+  - Adjust centroids  
 
+#### Python:
+```python
+from sklearn.cluster import KMeans
+kmeans = KMeans(2)
+kmeans.fit(x)
 
+# Clustering result:
+cluster = kmean.fit_predict(x) #return the cluster predictions in an array
+
+```
 </details>
 
 
